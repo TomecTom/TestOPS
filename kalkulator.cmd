@@ -8,9 +8,16 @@ set /p operace=napiste operaci /,*,+:
 
 
 
-if %operace%==*: GOTO:SOUCIN
-if %operace%==/: GOTO:DELENI
-if %operace%==+: GOTO:SOUCET
+if "%operace%"=="*" (
+    GOTO SOUCIN
+) else if "%operace%"=="/" (
+    GOTO DELENI
+) else if "%operace%"=="+" (
+    GOTO SOUCET
+) else (
+    GOTO KONEC
+)
+
 
 
 
