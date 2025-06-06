@@ -17,14 +17,16 @@ if %operace%==+: GOTO:SOUCET
 :SOUCIN
 set /a vysledek=%prvnic% * %druhec%
 echo %prvnic%*%druhec%=%vysledek%
+GOTO:KONEC
 :DELENI
 set /a vysledek=%prvnic% / %druhec%
 echo %prvnic%/%druhec%=%vysledek%
+GOTO:KONEC
 :SOUCET
 set /a vysledek=%prvnic% + %druhec%
 echo %prvnic%+%druhec%=%vysledek%
+GOTO:KONEC
 
-
-
+:KONEC
 
 pause
